@@ -1,8 +1,9 @@
+package ex01.src.main.java;
 import java.time.LocalDate;
 
 public class Pet {
     private String name;
-    private String race;
+    private Race race;
     private String species;
     private LocalDate checkin;
     private String color;
@@ -19,7 +20,7 @@ public class Pet {
         this.isAdopted = false;
     }
 
-    public Pet(String name, String race, String species, LocalDate checkin, String color, double weight){
+    public Pet(String name, Race race, String species, LocalDate checkin, String color, double weight){
         this.name = name;
         this.race = race;
         this.species = species;
@@ -45,8 +46,8 @@ public class Pet {
         this.name = name;
     }
 
-    public String getRace() { return race; }
-    public void setRace(String race) {
+    public Race getRace() { return race; }
+    public void setRace(Race race) {
         this.race = race;
     }
 

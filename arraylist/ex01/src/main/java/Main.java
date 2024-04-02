@@ -1,3 +1,5 @@
+package ex01.src.main.java;
+
 import java.util.ArrayList;
 import java.time.LocalDate;
 
@@ -16,12 +18,12 @@ public class Main {
         String nomePetCheck = new String();
         boolean hasPet = false;
 
-        pets.add(new Pet("Kate", "Vira-Lata", "Cachorro", LocalDate.of(2009, 6, 12), "Preta", 35));
-        pets.add(new Pet("Bob", "Bulldog", "Cachorro", LocalDate.of(2010, 10, 9), "Preta", 22));
-        pets.add(new Pet("Pitty", "Pitbull", "Cachorro", LocalDate.of(2007, 3, 2), "Branca", 38));
-        pets.add(new Pet("Kelly", "Labrador", "Cachorro", LocalDate.of(2001, 5, 8), "Amarela", 36));
-        pets.add(new Pet("Peixe", "Vira-Lata", "Cachorro", LocalDate.of(2008, 11, 9), "Amarela", 20));
-        pets.add(new Pet("Grazi", "Pastor", "Cachorro", LocalDate.of(2012, 12, 12), "Amarela", 18));
+        pets.add(new Pet("Kate", Race.VIRA_LATA, "Cachorro", LocalDate.of(2009, 6, 12), "Preta", 35));
+        pets.add(new Pet("Bob", Race.BULLDOG, "Cachorro", LocalDate.of(2010, 10, 9), "Preta", 22));
+        pets.add(new Pet("Pitty", Race.PITBULL, "Cachorro", LocalDate.of(2007, 3, 2), "Branca", 38));
+        pets.add(new Pet("Kelly", Race.LABRADOR, "Cachorro", LocalDate.of(2001, 5, 8), "Amarela", 36));
+        pets.add(new Pet("Peixe", Race.VIRA_LATA, "Cachorro", LocalDate.of(2008, 11, 9), "Amarela", 20));
+        pets.add(new Pet("Grazi", Race.PASTOR_ALEMAO, "Cachorro", LocalDate.of(2012, 12, 12), "Amarela", 18));
 
         pessoas.add(new Pessoa("Diana", "12345678901", new Endereco("00000000", "Mario Perdigão", "Cordovil", "RJ", 120), new Contato("021999999999", "diana@gmail.com"), 'F'));
         pessoas.add(new Pessoa("Louis", "23456789012", new Endereco("00000000", "Princesa Isabel", "Copacabana", "RJ", 1201), new Contato("021999999999", "louis@gmail.com"), 'M'));
@@ -48,7 +50,7 @@ public class Main {
 
         for(int i = 0; i < fichas.size(); i++){
             if(fichas.get(i).contains(nomePetCheck)) hasPet = true;
-            if(fichas.get(i).getPet().getRace() == "Vira-Lata") countViraLatasAdotados++;
+            if(fichas.get(i).getPet().getRace() == Race.VIRA_LATA) countViraLatasAdotados++;
             if(fichas.get(i).tempoAdotado() > maisTempoAdotado.tempoAdotado()) maisTempoAdotado = fichas.get(i);
         }
 
@@ -64,7 +66,7 @@ public class Main {
 
         for(int i = 0; i < pets.size(); i++){
             if(pets.get(i).getColor().equals("Amarela")) qntAmarelos++;
-            if(pets.get(i).getRace().equals("Vira-Lata")) countViraLatas++;
+            if(pets.get(i).getRace().equals(Race.VIRA_LATA)) countViraLatas++;
             if(pets.get(i).getNutricao().equals("Desnutrido")) qntDesnutridos++;
         }
 

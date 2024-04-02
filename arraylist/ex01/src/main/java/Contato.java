@@ -1,3 +1,5 @@
+package ex01.src.main.java;
+
 public class Contato {
     
     private String telefone;

@@ -1,3 +1,5 @@
+package ex01.src.main.java;
+
 public class Endereco {
 
     private String cep;
